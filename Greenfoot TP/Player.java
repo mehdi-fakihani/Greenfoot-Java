@@ -20,6 +20,8 @@ public class Player extends Actor
     public void act() 
     {
         checkInput();
+        if(getY() == 0)
+            ((MyWorld)getWorld()).win();
     }
     
     public void checkInput()

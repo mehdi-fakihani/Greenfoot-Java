@@ -27,4 +27,14 @@ public class MyWorld extends World
         addObject(player, WORLD_WIDTH/2, WORLD_HEIGHT-1); 
         
     }
+    
+    public void win()
+    {
+        //GreenfootImage winText = new GreenfootImage("YOU WIN", 12, null, null, null);
+        showText("YOU WIN!", WORLD_WIDTH/2, WORLD_HEIGHT/2); 
+        Greenfoot.stop();
+    }
+    public void lose()
+    {
+    }
 }
