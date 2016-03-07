@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private static final int CELL_SIZE = 20;
-    private static final int WORLD_WIDTH = 40; //in cell
-    private static final int WORLD_HEIGHT = 30; //in cell
+    private static final int CELL_SIZE = 1;
+    private static final int WORLD_WIDTH = 640; //in cell
+    private static final int WORLD_HEIGHT = 480; //in cell
 
     /**
      * Constructor for objects of class MyWorld.
@@ -23,14 +23,14 @@ public class MyWorld extends World
         Greenfoot.setSpeed(60);
         
         Player player = new Player();
-        addObject(player, WORLD_WIDTH/2, WORLD_HEIGHT-1);
+        addObject(player, WORLD_WIDTH/2, WORLD_HEIGHT-25);
         
         Car car1 = new Car();
         addObject(car1, WORLD_WIDTH/2, WORLD_HEIGHT/2);
         Truck truck1 = new Truck();
-        addObject(truck1, WORLD_WIDTH/2, WORLD_HEIGHT/2 + 5);    
+        addObject(truck1, WORLD_WIDTH/2, WORLD_HEIGHT/2 + 100);    
         Train train1 = new Train();
-        addObject(train1, WORLD_WIDTH/2, WORLD_HEIGHT/2 - 5);    
+        addObject(train1, WORLD_WIDTH/2, WORLD_HEIGHT/2 - 100);    
     }
     public void win()
     {

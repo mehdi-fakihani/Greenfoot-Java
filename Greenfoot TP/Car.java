@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Vehicle
 {
-    private final double carSpeed = 2;
+    private final double CAR_SPEED = 2;
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Car()
     {
-        super.setSpeed(carSpeed);
+        super.setSpeed(CAR_SPEED);
     }
     public void act() 
     {

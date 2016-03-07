@@ -8,11 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Truck extends Vehicle
 {
-    private final double TruckSpeed = 1;   
+    private final double TRUCK_SPEED = 1;   
     
     public Truck()
     {
-        super.setSpeed(TruckSpeed);
+        super.setSpeed(TRUCK_SPEED);
     }    
     
     /**
