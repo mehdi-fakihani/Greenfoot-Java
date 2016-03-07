@@ -26,7 +26,7 @@ public class Train extends Vehicle
             //If actor is overbound it's replace to mirror image after a moment
             if(super.isOffWorld()){
                 if(delay <= 0) {
-                    resetPositionVehicle();
+                    removeVehicle();
                     delay = MAX_DELAY;
                 }
                 else{

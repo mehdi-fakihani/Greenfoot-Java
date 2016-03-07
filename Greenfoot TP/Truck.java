@@ -8,11 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Truck extends Vehicle
 {
-    private final double TRUCK_SPEED = 1;   
+    private double TRUCK_SPEED = 1;   
     
     public Truck()
     {
-        super.setSpeed(TRUCK_SPEED);
+        if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
+        {
+            super.setSpeed(TRUCK_SPEED);
+            setNbrRoadVehicle(getNbrRoadVehicle() + 1);
+        }
     }    
     
     /**
@@ -24,6 +28,9 @@ public class Truck extends Vehicle
         super.move();
         checkCollision();
         if(super.isOffWorld())//If actor is overbound it's replace to mirror image
-            resetPositionVehicle();
+        {    
+            removeVehicle();
+            setNbrRoadVehicle(getNbrRoadVehicle() - 1);
+        }   
     }
 }
