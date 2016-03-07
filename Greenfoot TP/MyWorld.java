@@ -28,7 +28,8 @@ public class MyWorld extends World
         addObject(car1, WORLD_WIDTH/2, WORLD_HEIGHT/2);  
         
         Truck truck1 = new Truck();
-        addObject(truck1, WORLD_WIDTH/2, WORLD_HEIGHT/2 + 100);    
+        addObject(truck1, WORLD_WIDTH/2, WORLD_HEIGHT/2 + 100);
+        
         Train train1 = new Train();
         addObject(train1, WORLD_WIDTH/2, WORLD_HEIGHT/2 - 100);    
     }

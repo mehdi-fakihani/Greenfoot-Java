@@ -9,9 +9,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public abstract class Vehicle extends Actor
 { 
     private double speed;
-    private static int nbrRoadVehicle = 0;
-    private static final int NBR_ROAD_VEHICLE_MAX = 4;
+    /*private static int nbrRoadVehicle = 0;
+    private static final int NBR_ROAD_VEHICLE_MAX = 4;*/
     
+    public void act() 
+    {
+        move();
+        checkCollision();
+        if(isAtEdge())//If actor is overbound it's replace to mirror image
+        {    
+            /*removeVehicle();
+            setNbrRoadVehicle(getNbrRoadVehicle() - 1);//Decrement number of Vehicule on the road*/
+            resetPositionVehicle();
+        }   
+    }
+    public final void resetPositionVehicle()
+    {
+     int x = getX();
+     int newX = getWorld().getWidth() - (x==0 ? 1 : x);
+     setLocation(newX, getY());
+    }
     public final void move()
     {
         setLocation((int)Math.round(getX() + speed), getY());
@@ -24,10 +41,6 @@ public abstract class Vehicle extends Actor
     {
         return speed;
     }
-    public final boolean isOffWorld() 
-    {
-        return ( (getX() <= 1) || (getY() <= 1) || (getX() >= (getWorld().getWidth()-1)) || (getY() >= (getWorld().getHeight()-1)) );
-    }
     public final void removeVehicle()//All object over bound is delete
     {
         ((MyWorld)getWorld()).removeObject(this);
@@ -35,11 +48,9 @@ public abstract class Vehicle extends Actor
     public void checkCollision()
     {
         if (null != getOneIntersectingObject(Player.class))
-        {
             ((MyWorld)getWorld()).lose();
-        }
     }
-    public static int getNbrRoadVehicle()
+    /*public static int getNbrRoadVehicle()
     {
         return nbrRoadVehicle;
     }
@@ -47,8 +58,8 @@ public abstract class Vehicle extends Actor
     {
         nbrRoadVehicle = nbrVehicle;
     }
-    public final int getRoadVehicleMax()
+    public static int getRoadVehicleMax()
     {
         return NBR_ROAD_VEHICLE_MAX;
-    }
+    }*/
 }

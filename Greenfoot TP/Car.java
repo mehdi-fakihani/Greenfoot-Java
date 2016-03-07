@@ -15,21 +15,11 @@ public class Car extends Vehicle
      */
     public Car()
     {
-        if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
-        {
-            super.setSpeed(CAR_SPEED);
-            setNbrRoadVehicle(getNbrRoadVehicle() + 1);
-        }
-    }
-    public void act() 
-    {
-        super.move();
-        checkCollision();
-        if(super.isOffWorld())//If actor is overbound it's replace to mirror image
-        {    
-            removeVehicle();
-            setNbrRoadVehicle(getNbrRoadVehicle() - 1);//Decrement number of Vehicule on the road
-            Car car = new Car();// recreate new Car
-        }   
+        /*if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
+        {*/
+            setSpeed(CAR_SPEED);
+            setImage("images/car.png");
+            //setNbrRoadVehicle(getNbrRoadVehicle() + 1);
+        //}
     }
 }

@@ -12,25 +12,11 @@ public class Truck extends Vehicle
     
     public Truck()
     {
-        if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
-        {
-            super.setSpeed(TRUCK_SPEED);
-            setNbrRoadVehicle(getNbrRoadVehicle() + 1);
-        }
+        //if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
+        //{
+            setSpeed(TRUCK_SPEED);
+            setImage("images/truck.png");
+            //setNbrRoadVehicle(getNbrRoadVehicle() + 1);
+        //}
     }    
-    
-    /**
-     * Act - do whatever the Truck wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        super.move();
-        checkCollision();
-        if(super.isOffWorld())//If actor is overbound it's replace to mirror image
-        {    
-            removeVehicle();
-            setNbrRoadVehicle(getNbrRoadVehicle() - 1);
-        }   
-    }
 }

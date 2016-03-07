@@ -11,27 +11,14 @@ public class Train extends Vehicle
     private final double TRAIN_SPEED = 3;
     private final int MAX_DELAY = 100;
     private int delay = 0;
+    
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Train()
     {
-        super.setSpeed(TRAIN_SPEED);
+        setSpeed(TRAIN_SPEED);
+        setImage("images/train.png");
     }
-    public void act() 
-    {
-            super.move();
-            checkCollision();
-            //If actor is overbound it's replace to mirror image after a moment
-            if(super.isOffWorld()){
-                if(delay <= 0) {
-                    removeVehicle();
-                    delay = MAX_DELAY;
-                }
-                else{
-                    delay --;
-                }
-            }
-    } 
 }
