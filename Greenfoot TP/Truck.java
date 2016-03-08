@@ -15,7 +15,7 @@ public class Truck extends Vehicle
         //if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
         //{
             setSpeed(TRUCK_SPEED);
-            setImage("images/truck.png");
+            setImage("truck.png");
             //setNbrRoadVehicle(getNbrRoadVehicle() + 1);
         //}
     }    

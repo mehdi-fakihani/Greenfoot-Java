@@ -18,7 +18,7 @@ public class Car extends Vehicle
         /*if(getNbrRoadVehicle()<getRoadVehicleMax())//Create only if number create < number max
         {*/
             setSpeed(CAR_SPEED);
-            setImage("images/car.png");
+            setImage("Car.png");
             //setNbrRoadVehicle(getNbrRoadVehicle() + 1);
         //}
     }

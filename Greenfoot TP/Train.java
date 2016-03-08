@@ -19,6 +19,6 @@ public class Train extends Vehicle
     public Train()
     {
         setSpeed(TRAIN_SPEED);
-        setImage("images/train.png");
+        setImage("train.png");
     }
 }
