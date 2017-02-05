@@ -1,6 +1,6 @@
 # Greenfoot-Java
 
-Le but de se projet est de réaliser un Crossy-Road-like.
+Le but de ce projet est de réaliser un Crossy-Road-like.
 
 # Principe :
 - Le jeu contiendra un personnage qui devra aller le plus loin possible tout en évitant les obstacles sur sa route.
@@ -12,5 +12,5 @@ Les obstacles peuvent être soient :
 Le projet est écrit en Java avec le logiciel Greenfoot : http://www.greenfoot.org/
 
 
-By Mehdi Fakihani & Kevin Hassan 
+Par Mehdi Fakihani & Kevin Hassan 
 IG3 Polytech Montpellier - 2016
